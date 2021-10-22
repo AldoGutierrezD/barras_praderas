@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" type="image/jpg" href="icono.png"/>
+    <title>Las Barras Praderas</title>
+</head>
+<body>
+    <header class="titulo">
+        <h1>Las Barras Praderas</h1>
+    </header>
+    <section id="seccion-principal">
+        <article>
+            <table>
+                <tr>
+                    <th colspan="4">Suplementos Alimenticios: {{sumarCantidades}}</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Nombre</td>
+                    <td>Precio</td>
+                    <td>Total</td>
+                </tr>
+                <tr v-for="(item, i) in suplementos" :class="{fondo:item.cantidad==0}">
+                    <td>
+                        <button @click="item.cantidad++">+</button>
+                        <input type="text" class="inputCantidad" v-model="item.cantidad">
+                        <button :disabled="item.cantidad==0" @click="item.cantidad--">-</button>
+                    </td>
+                    <td>{{item.nombre}}</td>
+                    <td v-if="item.cantidad>0">${{item.precioUnitario}}</td>
+                    <td v-if="item.cantidad>0">${{montoSuplemento(i)}}</td>
+                </tr>
+                <tr>
+                    <!--TITULOS-->
+                    <td colspan="3" id="titulos">
+                        <h4>Subtotal: </h4>
+                        <h4>Iva: </h4>
+                        <h4>Total: </h4>
+                    </td>
+                    <!--CANTIDADES-->
+                    <td id="cantidades">
+                        <h4>${{calculoSubtotal}}</h4>
+                        <h4>${{calculoIva}}</h4>
+                        <h4><u>${{calculoTotal}}</u></h4>
+                    </td>
+                </tr>
+            </table>
+        </article>
+        <fieldset class="col-6">
+            <legend>Nueva suplemento</legend>
+            Nombre: <input type="text" v-model="nuevoSuplementoNombre" placeholder="Ingrese el nombre">
+            Cantidad: <input type="number" v-model.number="nuevoSuplementoCantidad" placeholder="Ingrese la cantidad">
+            Precio: <input type="number" v-model.number="nuevoSuplementoPrecio" placeholder="Ingrese el precio">
+            <button @click="agregar()">Agregar</button>
+        </fieldset>
+    </section>
+
+    <script src="vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

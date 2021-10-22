@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header{
+    background-color: rgb(99, 89, 245);
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 0px;
+}
+
+section{
+    /*background-color: rgb(64, 131, 78);*/
+    background-image: linear-gradient(120deg, #f984ff 0, #cd76ff 25%, #a065e5 50%, #7654c6 75%, #4f45a9 100%);
+    padding: 10px;
+    display: flex;
+}
+
+article, fieldset{
+    width: 60%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.inputCantidad{
+    border: none;
+    font-size: 16px;
+    padding: 2px;
+}
+
+fieldset{
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 1px solid #fff;
+}
+
+fieldset input{
+    display: block;
+    margin: 0 auto;
+    height: 25px;
+    padding: 3px;
+    border: none;
+    font-size: 1rem;
+}
+
+fieldset button{
+    width: 53%;
+    padding: 7px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: rgb(245, 182, 88);
+    cursor: pointer;
+}
+
+fieldset button:hover{
+    background-color: rgb(212, 127, 16);
+}
+
+legend{
+    font-weight: bold;
+}
+
+article{
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 20px;
+}
+
+article input{
+    margin: 0 auto;
+    height: 30px;
+    width: 100px;
+    font-size: 20px;
+}
+
+article button{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color: rgb(235, 159, 61);
+    border: none;
+}
+
+article button:hover{
+    background-color: rgb(212, 127, 16);
+}
+
+table{
+    margin: 0 auto;
+    width: 800px;
+    padding: 20px;
+    text-align: center;
+}
+
+th{
+    background-color: rgb(245, 182, 88);
+    padding: 3px 0 3px;
+    font-size: 20px;
+    text-align: center;
+}
+
+td{
+    /*box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;*/
+    border-bottom: 1px solid #000;
+    padding: 5px;
+    width: 200px;
+}
+
+#titulos{
+    text-align: right;
+}
+
+#cantidades{
+    text-align: left;
+}
+
+.btnCantidad{
+    width: 400px;
+}
+
+.fondo{
+    background-color: rgb(235, 201, 140);
+}
+
+.texto{
+    font-size: 1.5rem;
+    color: blue;
+}
